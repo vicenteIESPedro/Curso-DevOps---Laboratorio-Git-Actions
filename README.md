@@ -73,7 +73,7 @@ Para activar este workflow en el repositorio debo seguir estos pasos:
 1. Crear otra rama, commit en esta rama y subirlo a github.
 Crearé el archivo ci.yaml en una rama llamada "rama-ci". Además, incluyo en el commit algún archivo de la carpeta hangman-front que haya modificado y subo este commit al repositorio.
 <img width="877" height="448" alt="ejercicio 1-commit" src="https://github.com/user-attachments/assets/53a27359-6ea1-4e8d-be21-e407f5f07fcc" />
-
+  
 2. Realizar la PullRequest
 Desde github, pestaña PullRequest, activamos la PullRequest de la rama "rama-ci" a main. Esto Activará el workflow
 <img width="962" height="714" alt="ejercicio 1-iniciar pullrequest" src="https://github.com/user-attachments/assets/2c6fe0fd-313f-4e9a-a146-1de8f60c8582" />  
@@ -84,10 +84,19 @@ Pasado un tiempo, finalizará la ejecución del workflow
 Como se observa hay un error en la ejecucuón de los Test, (no es parte de este laboratorio) el depurar el código.
 Podemos acceder a la salida del workflow pulsando directamente en el job correspondiente.
 <img width="1540" height="707" alt="ejercicio 1-detalles ejecución workflow" src="https://github.com/user-attachments/assets/aa33cb5d-1b5a-4d3f-815a-daabc6af76b0" />
-
+  
 3. Consulta de la PullRequest
-Podemos dejar abierta la PullRequest. Mientras esté abierta cualquier commit el la misma rama, si se cumplen las condiciones, hará que se ejecute el workflow.
-Se podrá consultar la Pullrequest en la pestaña PullRequest de github.   
+Podemos dejar abierta la PullRequest. Mientras esté abierta cualquier commit en la misma rama, si se cumplen las condiciones, hará que se ejecute el workflow.
+Se podrá consultar la Pullrequest en la pestaña PullRequest de github.
+<img width="613" height="342" alt="ejercicio 1-pullrequest" src="https://github.com/user-attachments/assets/d7c7162d-66f8-4090-9618-479efe4ec3df" />
+Y acceder a la propia PullRequest pulsando en ella.
+
+4. Cerrar la PullRequest
+Una vez estemos en la PullRequest, podemos darla por finalizada confirmandola
+
+  
+
+ 
 
 
 

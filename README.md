@@ -76,12 +76,18 @@ Crearé el archivo ci.yaml en una rama llamada "rama-ci". Además, incluyo en el
 
 2. Realizar la PullRequest
 Desde github, pestaña PullRequest, activamos la PullRequest de la rama "rama-ci" a main. Esto Activará el workflow
-<img width="962" height="714" alt="ejercicio 1-iniciar pullrequest" src="https://github.com/user-attachments/assets/2c6fe0fd-313f-4e9a-a146-1de8f60c8582" />
+<img width="962" height="714" alt="ejercicio 1-iniciar pullrequest" src="https://github.com/user-attachments/assets/2c6fe0fd-313f-4e9a-a146-1de8f60c8582" />  
 Al pulsar para crear el PullRequest nos aparecerá una nueva ventana en la que, si todo va bien, podremos observar la ejecución del workflow
-<img width="917" height="703" alt="ejercicio 1-ejecución de workflow" src="https://github.com/user-attachments/assets/023bc1dc-5b79-40fd-abc0-341860d54258" />
+<img width="917" height="703" alt="ejercicio 1-ejecución de workflow" src="https://github.com/user-attachments/assets/023bc1dc-5b79-40fd-abc0-341860d54258" />  
 Pasado un tiempo, finalizará la ejecución del workflow
-<img width="909" height="714" alt="ejercicio 1-ejecución de workflow-error" src="https://github.com/user-attachments/assets/f971b2c3-5f24-493f-af8e-35bc51755a90" />
-Como se observa hay un error en la ejecucuón de los Test, (no es parte de este laboratorio) el depurar el código.  
+<img width="909" height="714" alt="ejercicio 1-ejecución de workflow-error" src="https://github.com/user-attachments/assets/f971b2c3-5f24-493f-af8e-35bc51755a90" />  
+Como se observa hay un error en la ejecucuón de los Test, (no es parte de este laboratorio) el depurar el código.
+Podemos acceder a la salida del workflow pulsando directamente en el job correspondiente.
+<img width="1540" height="707" alt="ejercicio 1-detalles ejecución workflow" src="https://github.com/user-attachments/assets/aa33cb5d-1b5a-4d3f-815a-daabc6af76b0" />
+
+3. Consulta de la PullRequest
+Podemos dejar abierta la PullRequest. Mientras esté abierta cualquier commit el la misma rama, si se cumplen las condiciones, hará que se ejecute el workflow.
+Se podrá consultar la Pullrequest en la pestaña PullRequest de github.   
 
 
 

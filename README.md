@@ -84,7 +84,7 @@ Al pulsar para crear el PullRequest nos aparecerá una nueva ventana en la que, 
 Pasado un tiempo, finalizará la ejecución del workflow
 <img width="909" height="714" alt="ejercicio 1-ejecución de workflow-error" src="https://github.com/user-attachments/assets/f971b2c3-5f24-493f-af8e-35bc51755a90" />  
   
-Como se observa hay un error en la ejecucuón de los Test, (no es parte de este laboratorio) el depurar el código.
+Como se observa hay un error en la ejecución de los Test, (no es parte de este laboratorio) el depurar el código.
 Podemos acceder a la salida del workflow pulsando directamente en el job correspondiente.
 <img width="1540" height="707" alt="ejercicio 1-detalles ejecución workflow" src="https://github.com/user-attachments/assets/aa33cb5d-1b5a-4d3f-815a-daabc6af76b0" />
   

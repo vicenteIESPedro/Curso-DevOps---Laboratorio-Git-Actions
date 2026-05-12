@@ -88,7 +88,7 @@ Podemos acceder a la salida del workflow pulsando directamente en el job corresp
 3. Consulta de la PullRequest
 Podemos dejar abierta la PullRequest. Mientras esté abierta cualquier commit en la misma rama, si se cumplen las condiciones, hará que se ejecute el workflow.
 Se podrá consultar la Pullrequest en la pestaña PullRequest de github.
-<img width="613" height="342" alt="ejercicio 1-pullrequest" src="https://github.com/user-attachments/assets/d7c7162d-66f8-4090-9618-479efe4ec3df" />
+<img width="613" height="342" alt="ejercicio 1-pullrequest" src="https://github.com/user-attachments/assets/d7c7162d-66f8-4090-9618-479efe4ec3df" />  
 Y acceder a la propia PullRequest pulsando en ella.
 
 4. Cerrar la PullRequest

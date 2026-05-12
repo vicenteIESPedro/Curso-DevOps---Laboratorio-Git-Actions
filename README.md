@@ -92,7 +92,15 @@ Se podrá consultar la Pullrequest en la pestaña PullRequest de github.
 Y acceder a la propia PullRequest pulsando en ella.
 
 4. Cerrar la PullRequest
-Una vez estemos en la PullRequest, podemos darla por finalizada confirmandola
+Una vez estemos en la PullRequest, hacemos Merge, cerrándola y borrando la rama.
+<img width="970" height="608" alt="ejercicio 1-merge" src="https://github.com/user-attachments/assets/00518313-6b64-45f0-b81e-a39e20b5ca2c" />
+Además, borramos la rama en el git local y actualizamos la rama main.  
+<img width="694" height="491" alt="ejercicio 1-fin git local" src="https://github.com/user-attachments/assets/c024d02a-ca6a-4b57-9d9f-8a40379ccc36" />
+
+### EJERCICIO 2: WORKFLOW CD ###
+
+
+
 
   
 

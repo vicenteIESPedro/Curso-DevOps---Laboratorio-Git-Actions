@@ -102,7 +102,113 @@ Además, borramos la rama en el git local y actualizamos la rama main.
 <img width="694" height="491" alt="ejercicio 1-fin git local" src="https://github.com/user-attachments/assets/c024d02a-ca6a-4b57-9d9f-8a40379ccc36" />
 
 ### EJERCICIO 2: WORKFLOW CD ###
+Este ejercicio me permitirá publicar la imagen Docker que se genera con el código en el registro de GITHUB.  
+Tengo que tener en cuenta varias cosas:  
+1. El repositorio en el que se almacenará la imagen es ghcr.io  
+2. Debo tener un Token de GitHub para que se pueda publicar en mi espacio de GitHub.  
+Para ello, debo acceder a mis Settings de GitHub, y en el apartado Developer Settings/Personal access Tokens definir un token.
+<img width="794" height="478" alt="ejercicio2-token" src="https://github.com/user-attachments/assets/8a4f981f-3683-45fe-9ce9-3c7ae6884e34" />
 
+El siguiente paso es definir el archivo de workflow. Yo he definido .github/workflows/cd.yaml  
+```
+# defino variables que usaré después
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+    
+# defino los trabajos a realizar
+jobs:
+  # se usará una máquina virtual de ubuntu para el despliegue
+  construir-publicar-imagen:
+    runs-on: ubuntu-latest
+
+    # defino los permisos necesarios. Es importante que para packages sea write (escritura). Si nó no 
+    # podremos colocar la imagen que creamos
+    permissions:
+      contents: read
+      packages: write
+      attestations: write
+      id-token: write
+
+    #definimos los pasos
+    steps:
+      # subo el repositorio a la máquina virtual
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      # me conecto al repositorio de GitHub. Usaré el usuario de Github con el que estoy
+      # conectado y el token que he definido en Github en setting como contraseña. 
+      - name: Docker login
+        uses: docker/login-action@v4
+        with:
+          # repositorio
+          registry: ${{ env.REGISTRY }}
+          # usuario, el de Github
+          username: ${{ github.actor }}
+          # contraseña, el token que tengo definido
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      # obtengo metadatos necesarios en pasos posteriores
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v6
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+
+      # configuro docker para que permita versiones en varios SO
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v4
+
+      # construyo y publico la imagen docker que se genera para el proyecto hangman-front
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v7
+        with:
+          # trabajaré sobre la carpeta hangman-from
+          context: ./hangman-front
+          # publico la imagen
+          push: true
+          # defino etiquetas
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+```
+
+Una vez definido el workflow debemos subirlo a nuestro repositorio. Además, vamos a ejecutarlo y ver los resultados. Para todo este proceso se siguen los siguientes pasos:  
+
+1. Subir al repositorio el archivo de workflow  
+Desde mi máquina local, genero un commit y realizo un push sobre Github.
+<img width="646" height="352" alt="ejercicio2-push" src="https://github.com/user-attachments/assets/4f5c2db3-ee26-4778-827b-043accfc294b" />
+
+2. PullRequest sobre la rama principal  
+Genero el PullRequest de la rama 'rama-cd' a la rama main. Cierro la PoolRequest para que aparezca el workflow en Actions. Al no haber realizado ningún cambio en archivos de hangman-front no se lanzará el workflow del ejercicio 1. 
+<img width="604" height="691" alt="ejercicio2-pullrequest" src="https://github.com/user-attachments/assets/782b4a7c-7e92-408c-b58c-e3969b5d607e" />
+
+3. Verifico que ya tengo el workflow Despliegue continuo disponible.  
+En la pestaña Actions puedo comprobarlo.  
+<img width="795" height="515" alt="ejercicio2-accion" src="https://github.com/user-attachments/assets/38469cde-02f2-421e-92e7-b042482fc509" />  
+
+4. Ejecutar el workflow Despliegue Continuo  
+En Actions, selecciono el workflow y pulso en el botón Run workflow. Puedo indicar la rama que voy a usar.  
+<img width="797" height="477" alt="ejercicio2-ejecutar accion" src="https://github.com/user-attachments/assets/d3b826d5-bf0a-4b48-ba89-764c3b6e4ea4" />
+
+Una vez lanzada podremos ver el estado de ejecución.  
+<img width="754" height="502" alt="ejercicio2-ejecutar correcta" src="https://github.com/user-attachments/assets/52dced4b-0a98-434e-b75c-55d9d51082ce" />  
+
+Y los detalles.  
+<img width="779" height="685" alt="ejercicio2-ejecutar correcta detalles" src="https://github.com/user-attachments/assets/9378d975-9e82-4023-a146-b0cf3e9ecc01" />  
+
+5. Borrar rama en Github y actualizar rama main local
+Borro la rama "rama-cd" y en mi equipo realizo un pull sobre la rama main
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 

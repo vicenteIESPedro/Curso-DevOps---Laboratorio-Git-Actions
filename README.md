@@ -198,7 +198,11 @@ Y los detalles.
 
 5. Borrar rama en Github y actualizar rama main local  
 Borro la rama "rama-cd" y en mi equipo realizo un pull sobre la rama main
-<img width="554" height="419" alt="ejercicio2-operaciones post local" src="https://github.com/user-attachments/assets/c30cf9f6-0c56-49bd-b388-7de013d79f16" />
+<img width="554" height="419" alt="ejercicio2-operaciones post local" src="https://github.com/user-attachments/assets/c30cf9f6-0c56-49bd-b388-7de013d79f16" />   ç
+
+6. Comprobar las imagenes en el registro  
+Tenemos que irnos a la pestaña Packages
+<img width="1125" height="336" alt="ejercicio2-paquete" src="https://github.com/user-attachments/assets/0d1d2d3e-8d44-4e66-96a1-95e407e74c7d" />
 
 
 

@@ -196,7 +196,7 @@ Una vez lanzada podremos ver el estado de ejecución.
 Y los detalles.  
 <img width="779" height="685" alt="ejercicio2-ejecutar correcta detalles" src="https://github.com/user-attachments/assets/9378d975-9e82-4023-a146-b0cf3e9ecc01" />  
 
-5. Borrar rama en Github y actualizar rama main local
+5. Borrar rama en Github y actualizar rama main local  
 Borro la rama "rama-cd" y en mi equipo realizo un pull sobre la rama main
 <img width="554" height="419" alt="ejercicio2-operaciones post local" src="https://github.com/user-attachments/assets/c30cf9f6-0c56-49bd-b388-7de013d79f16" />
 

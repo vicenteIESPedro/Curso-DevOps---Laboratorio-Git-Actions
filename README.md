@@ -95,7 +95,7 @@ Se podrá consultar la Pullrequest en la pestaña PullRequest de github.
    
 Y acceder a la propia PullRequest pulsando en ella.
 
-5. Cerrar la PullRequest
+5. Cerrar la PullRequest  
 Una vez estemos en la PullRequest, hacemos Merge, cerrándola y borrando la rama.
 <img width="970" height="608" alt="ejercicio 1-merge" src="https://github.com/user-attachments/assets/00518313-6b64-45f0-b81e-a39e20b5ca2c" />
 Además, borramos la rama en el git local y actualizamos la rama main.  

@@ -83,12 +83,11 @@ Al pulsar para crear el PullRequest nos aparecerá una nueva ventana en la que, 
   
   
 3. Consulta de la PullRequest
-Podemos dejar abierta la PullRequest. Mientras esté abierta cualquier commit en la misma rama, si se cumplen las condiciones, hará que se ejecute el workflow.
-Se podrá consultar la Pullrequest en la pestaña PullRequest de github.
+Podemos dejar abierta la PullRequest, esto permitirá que, mientras esté abierta, cualquier commit en la misma rama, si se cumplen las condiciones, haga que se ejecute el workflow.  
+Por último, podemos consultar la Pullrequest en la pestaña PullRequest de github, pudiéndo acceder a la misma pulsando en ella.
 <img width="1248" height="264" alt="ejericio 1- pull request abierta" src="https://github.com/user-attachments/assets/ac8c8a48-c36f-45c0-84e0-b45bd4612a33" />  
 
-Y acceder a la propia PullRequest pulsando en ella.
-
+  
 5. Cerrar la PullRequest  
 Una vez estemos en la PullRequest, pulsamos en el botón Merge pull request, confirmamos el Merge y borramos la rama.
 <img width="925" height="650" alt="ejercicio 1-merge" src="https://github.com/user-attachments/assets/8a74e8f6-4aa6-4bbb-96af-f4713523cdfb" />  

@@ -82,17 +82,17 @@ Al pulsar para crear el PullRequest nos aparecerá una nueva ventana en la que, 
 <img width="906" height="738" alt="ejercicio 1-ejecución de workflow" src="https://github.com/user-attachments/assets/64a0225d-61db-46e0-91cb-1678b020f07f" />
   
   
-3. Consulta de la PullRequest
+3. Consulta de la PullRequest  
 Podemos dejar abierta la PullRequest, esto permitirá que, mientras esté abierta, cualquier commit en la misma rama, si se cumplen las condiciones, haga que se ejecute el workflow.  
-Por último, podemos consultar la Pullrequest en la pestaña PullRequest de github, pudiéndo acceder a la misma pulsando en ella.
+Además, podemos consultar la Pullrequest en la pestaña PullRequest de github, pudiéndo acceder a la misma pulsando en ella.
 <img width="1248" height="264" alt="ejericio 1- pull request abierta" src="https://github.com/user-attachments/assets/ac8c8a48-c36f-45c0-84e0-b45bd4612a33" />  
 
   
-5. Cerrar la PullRequest  
+4. Cerrar la PullRequest  
 Una vez estemos en la PullRequest, pulsamos en el botón Merge pull request, confirmamos el Merge y borramos la rama.
 <img width="925" height="650" alt="ejercicio 1-merge" src="https://github.com/user-attachments/assets/8a74e8f6-4aa6-4bbb-96af-f4713523cdfb" />  
   
-Además, borramos la rama en el git local y actualizamos la rama main.  
+También borramos la rama en el git local y actualizamos la rama main con el contenido de github    
 <img width="694" height="491" alt="ejercicio 1-fin git local" src="https://github.com/user-attachments/assets/c024d02a-ca6a-4b57-9d9f-8a40379ccc36" />
 
 ### EJERCICIO 2: WORKFLOW CD ###
